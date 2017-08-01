@@ -18,6 +18,7 @@ public class StudentController {
     public String createStudent(@RequestParam(value="first_name") String firstName,
                                 @RequestParam(value="last_name") String lastName, /* @RequestParam for last name */
                                 @RequestParam(value="grade") Grade grade, /* @RequestParam for grade */
+                                @RequestParam(value="enrolled") boolean isEnrolled, /* @RequestParam for grade */
                                 Model model) {
         Student student = new Student();
 
@@ -25,6 +26,7 @@ public class StudentController {
         student.setFirstName(firstName);
         student.setLastName(lastName);
         student.setGrade(grade);
+        student.setEnrolled(isEnrolled);
 
         /* add the student to the model that will be used by the view_student html file */
         model.addAttribute("student", student);

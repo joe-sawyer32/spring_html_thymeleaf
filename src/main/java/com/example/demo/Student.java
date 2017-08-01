@@ -5,6 +5,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private Grade grade;
+    private boolean enrolled;
 
     // CONSTRUCTORS
     public Student() {
@@ -33,5 +34,13 @@ public class Student {
 
     public void setGrade(Grade grade) {
         this.grade = grade;
+    }
+
+    public boolean isEnrolled() {
+        return enrolled;
+    }
+
+    public void setEnrolled(boolean enrolled) {
+        this.enrolled = enrolled;
     }
 }
